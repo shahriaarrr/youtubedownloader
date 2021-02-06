@@ -12,3 +12,9 @@ some notes:
 5-Please email me your feedback from this app: shahriaarrr@gmail.com
 
 6-Finally, I hope you use this program properly and enjoy working with it 😉
+
+Thanks to:
+
+1.Special thanks to Amir Hossein for his good advice🙏 (We made the graphic background app orange for him😉)
+
+2.Also, my dear friend Matin, for his good education and help that he gave me🙏
