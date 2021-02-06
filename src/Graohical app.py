@@ -11,7 +11,7 @@ class Main():
         self.config_width = 450
         self.confing_heigt = 350
         self.config_resizable = [False, False]
-        self.config_background = '#61ECD7'
+        self.config_background = '#F36A05'
 
         #load functions
         self.Load_Configs()
@@ -32,6 +32,14 @@ class Main():
             text = 'link:',
             foreground = 'black',
             background = self.config_background,
+            font = ('Arial', 20, 'bold') ,
+        ).pack()
+
+        link_input = Entry(
+            self.win,
+            background = '#FFFFFF',
+            foreground = 'black',
+            width = 64,
         ).pack()
 
 application = Main()
