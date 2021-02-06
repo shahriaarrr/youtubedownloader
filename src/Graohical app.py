@@ -27,9 +27,17 @@ class Main():
         self.win.config(bg = self.config_background)
 
     def Load_objects(self):
+        #space bitween head and text label
         Label(
             self.win,
-            text = 'link:',
+            text = '  ',
+            background = self.config_background,
+            font = ('Arial', 30)
+        ).pack()
+
+        Label(
+            self.win,
+            text = "Give me your youtube link: ",
             foreground = 'black',
             background = self.config_background,
             font = ('Arial', 20, 'bold') ,
@@ -42,4 +50,22 @@ class Main():
             width = 64,
         ).pack()
 
-application = Main()
+        #space bitween download button and text label
+        Label(
+            self.win,
+            text = '  ',
+            background = self.config_background,
+            font = ('Arial', 30)
+        ).pack()
+
+        download_button = Button(
+            self.win,
+            text = 'download',
+            background = '#0DF55E',
+            foreground = 'black',
+            border = 5,
+        ).pack()
+
+
+
+app = Main()
