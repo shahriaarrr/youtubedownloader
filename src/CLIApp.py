@@ -1,11 +1,9 @@
-# pip install pytube
 from pytube import YouTube, exceptions
 
 
 def download_video(url):
     x = YouTube(url)
-    print(x.streams)
-    # x.streams.last().download()
+    x.streams.first().download()
 
 
 def main():
