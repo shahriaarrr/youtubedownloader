@@ -1,6 +1,5 @@
 from pytube import YouTube
-from tkinter import *
-from pyguibox import *
+from tkinter import * 
 
 def main_program(url):
     x = YouTube(url)
@@ -36,9 +35,6 @@ class Main():
         a = self.link_input.get()
         main_program(a)
 
-        if(a == ''):
-            error('You must give the youtube link', title = "Error")
-
     def Load_objects(self):
         #space bitween head and text label
         Label(
@@ -61,8 +57,9 @@ class Main():
             background = '#FFFFFF',
             foreground = 'black',
             width = 64,
-        ).pack()
+        )
         self.link_input = link_input
+        link_input.pack()
 
         #space bitween download button and text label
         Label(
@@ -83,6 +80,23 @@ class Main():
         download_button.config(command = self.download_click)
         download_button.pack()
 
+        #space
+        Label(
+            self.win,
+            text = '  ',
+            background = self.config_background,
+            font = ('Arial', 80)
+        ).pack()
+
+
+        copy = Label(
+            self.win,
+            text = 'Copyright (c) 2021 Shahriar Ghasempour',
+            background = self.config_background,
+            foreground = 'black',
+            font = ('Arial', 10),
+        )
+        copy.pack()
 
 
 app = Main()
