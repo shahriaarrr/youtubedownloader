@@ -2,7 +2,12 @@ from pytube import YouTube
 from tkinter import *
 from pyguibox import *
 
+def main_program(url):
+    x = YouTube(url)
+    print(x)
 
+    for i in x.streams.first().download():
+        print(i)
 
 class Main():
     def __init__(self):
@@ -27,6 +32,13 @@ class Main():
         self.win.resizable(self.config_resizable[0], self.config_resizable[1])
         self.win.config(bg = self.config_background)
 
+    def download_click(self):
+        a = self.link_input.get()
+        main_program(a)
+
+        if(a == ''):
+            error('You must give the youtube link', title = "Error")
+
     def Load_objects(self):
         #space bitween head and text label
         Label(
@@ -50,6 +62,7 @@ class Main():
             foreground = 'black',
             width = 64,
         ).pack()
+        self.link_input = link_input
 
         #space bitween download button and text label
         Label(
@@ -65,7 +78,10 @@ class Main():
             background = '#0DF55E',
             foreground = 'black',
             border = 5,
-        ).pack()
+        )
+
+        download_button.config(command = self.download_click)
+        download_button.pack()
 
 
 
