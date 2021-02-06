@@ -1,14 +1,22 @@
-#pip install pytube
-from pytube import YouTube
+# pip install pytube
+from pytube import YouTube, exceptions
 
 
-def main_program(url):
+def download_video(url):
     x = YouTube(url)
-    print(x)
+    print(x.streams)
+    # x.streams.last().download()
 
-    for i in x.streams.first().download():
-        print(i)
 
-a = input("Give me your youtube link: ")
+def main():
+    a = input("Give me your youtube link: ")
+    try:
+        download_video(a)
+    except exceptions.RegexMatchError:
+        print("The input is not a youtube video link !")
+    except:
+        raise
 
-main_program(a)
+
+if __name__ == "__main__":
+    main()
