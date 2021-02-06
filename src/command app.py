@@ -2,7 +2,7 @@
 from pytube import YouTube
 
 
-def main_programm(url):
+def main_program(url):
     x = YouTube(url)
     print(x)
 
@@ -11,4 +11,4 @@ def main_programm(url):
 
 a = input("Give me your youtube link: ")
 
-main_programm(a)
+main_program(a)
